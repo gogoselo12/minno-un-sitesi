@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Beni Seviyor Musun?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style> /*...CSS...*/ </style>
+</head>
+<body>
+  <h1>Beni seviyor musun? ❤️</h1>
+  <div style="display:flex; justify-content:center; gap:20px; margin-top:50px;">
+    <button id="yes" style="font-size:20px; padding:15px 30px; background:#66cc66; color:#fff; border:none; border-radius:8px;">Evet</button>
+    <button id="no" style="font-size:20px; padding:15px 30px; background:#ff4d4d; color:#fff; border:none; border-radius:8px;">Hayır</button>
+  </div>
+  <script>
+    const yes = document.getElementById('yes'), no = document.getElementById('no');
+    let ySize = 20, nSize = 20;
+    no.onclick = () => {
+      if(nSize > 8) nSize -= 2;
+      ySize += 4;
+      no.style.fontSize = nSize + 'px';
+      yes.style.fontSize = ySize + 'px';
+    };
+    yes.onclick = () => {
+      document.body.innerHTML = "<h1 style='padding-top:100px;color:#e60073;font-size:2rem'>Ben de seni çok seviyorum! 💖</h1>";
+    };
+  </script>
+</body>
+</html>
